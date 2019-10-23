@@ -1,0 +1,27 @@
+comando cut
+
+cut -d "/" -f 3
+donde -d delimitador
+-f segmento
+
+ejemplo:
+
+echo '<a href="http://www.templatemonster.com/" rel="nofollow"><img src="images/footer-logo.png" alt="logo"></a>--></div>' | cut -d "/" -f 3
+
+Resp consola:www.templatemonster.com 
+
+
+
+curl -s http://dapras.cl | grep href | cut -d "/" -f 3 | grep "\."|cut -d '"' -f 1 |sort -u
+ie.css
+windows.microsoft.com
+www.compudemano.com
+www.elmundo.es
+www.nicniif.org
+www.templatemonster.com
+
+curl -s  srirve para que no aparezca el encabezado
+grep "\."   expresion irregular \     sirve para que el punto sea considerado
+grep -E                       sirve para avisarle a grep que se utilizaron expresiones regulares, estas sirven para encontrar patrones
+sort -u   ordena por alfabeto y elimina repetidos
+
